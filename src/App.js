@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import "./index.css"
 
-function App() {
+export default function App() {
+  var [count, setCount] = React.useState(1)
+  const [stardata, setStardata] = React.useState({})
+
+  function grow(){
+    setCount(function(prev){
+      return prev + 1
+    })
+  }
+  React.useEffect(function(){
+    fetch("https://swapi.dev/api/people/"+ count)
+    .then(res => res.json())
+    .then(data => setStardata(data))
+  }, [count])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={grow}>Get Next Character</button>
+      <pre>{JSON.stringify(stardata, null, 2)}</pre>
     </div>
   );
 }
-
-export default App;
