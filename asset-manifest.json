@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/fetching_apis_using_useEffect/static/css/main.fc5c2c69.css",
+    "main.js": "/fetching_apis_using_useEffect/static/js/main.cd5f72b6.js",
+    "index.html": "/fetching_apis_using_useEffect/index.html",
+    "main.fc5c2c69.css.map": "/fetching_apis_using_useEffect/static/css/main.fc5c2c69.css.map",
+    "main.cd5f72b6.js.map": "/fetching_apis_using_useEffect/static/js/main.cd5f72b6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fc5c2c69.css",
+    "static/js/main.cd5f72b6.js"
+  ]
+}
